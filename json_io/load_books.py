@@ -2,7 +2,7 @@ import os
 import json
 from typing import Tuple
 from book import Book
-from .books_dirrctory import BOOKS_DIRECTORY
+from .books_directory import BOOKS_DIRECTORY
 
 def load_books() -> Tuple[Book]:
     """
@@ -25,5 +25,8 @@ def load_book(file_path: str):
             return Book(**json.load(f))
     except (json.JSONDecodeError, TypeError) as e:
         print(f"Error loading book from '{file_path}': {e}")
+        return None
+    except FileNotFoundError as e:
+        print(f"File not found: {file_path}")
         return None
     

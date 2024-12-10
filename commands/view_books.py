@@ -21,6 +21,10 @@ def view_books(category: str = None, author: str = None, year: str = None, keywo
     # Фильтрует книги по аргументам
     filtered_books = list(map(lambda book: book.to_table(), filter_books(books, author, year, keywords)))
 
+    if not filtered_books:
+        print("No books found.")
+        return
+
     headers = ["Title", "Author", "Year", "Status", "ID"]
 
     print(generate_table(filtered_books, headers)) #Выводим таблицу

@@ -1,6 +1,6 @@
 from book import Book
 import os
-from .books_dirrctory import BOOKS_DIRECTORY
+from .books_directory import BOOKS_DIRECTORY
 
 
 def delete_book(book: Book):

@@ -1,5 +1,5 @@
 from book import Book
-from .books_dirrctory import BOOKS_DIRECTORY
+from .books_directory import BOOKS_DIRECTORY
 
 
 def save_book(book: Book):

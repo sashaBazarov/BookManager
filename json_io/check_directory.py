@@ -12,7 +12,7 @@
         - exist_ok: Если True, функция не вызовет исключение, если директория уже существует.
 """
 import os
-from .books_dirrctory import BOOKS_DIRECTORY
+from .books_directory import BOOKS_DIRECTORY
 
 
 os.makedirs(f"{BOOKS_DIRECTORY}/", exist_ok=True)
