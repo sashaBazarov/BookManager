@@ -1,0 +1,1 @@
+BOOKS_DIRECTORY = 'books'
